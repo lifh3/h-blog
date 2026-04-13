@@ -1,0 +1,45 @@
+# Dependencies
+frontend/node_modules
+blog-admin/node_modules
+
+# Build outputs
+frontend/dist
+blog-admin/dist
+
+# IDE
+.idea
+*.iml
+.vscode
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Backend
+backend/target
+backend/*.class
+backend/*.jar
+backend/.gradle
+backend/build
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Database
+*.db
+*.sqlite
+
+# Misc
+.cache
+*.pid

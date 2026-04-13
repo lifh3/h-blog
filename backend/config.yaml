@@ -1,0 +1,19 @@
+# AI 配置（MiniMax Anthropic 兼容接口）
+ai:
+  api-key: "sk-cp-fpIsZ4CLYuPE4sdZwrzIY1AXzKEhc6MOonzA2MqVTlMqr77RqPG52QdIO3wOrVTju_80LepVjb9uRnHeu0Oely-xb16czK3WeCw0ulcO9XLcR6e-FVs6OFQ"
+  base-url: "https://api.minimaxi.com/anthropic"
+  model: "MiniMax-M2.7-highspeed"
+
+# 热点获取
+hotnews:
+  api-url: "https://orz.ai/api/v1/dailynews/?platform=baidu"
+
+# 定时任务配置
+scheduler:
+  enabled: true
+  cron: "0 0 9 * * ?"    # cron 表达式，默认每天9点执行
+  auto-publish: false    # true=自动发布，false=仅生成草稿
+
+# 默认管理员ID（发文时使用）
+auto-publish:
+  admin-user-id: 1

@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cyber-bg: #0f1419;
+  --cyber-surface: #1a2332;
+  --cyber-border: #2d3a4f;
+  --cyber-cyan: #4a9eaf;
+  --cyber-blue: #3a8ab0;
+  --cyber-purple: #8a6ab8;
+  --cyber-green: #4a9e6a;
+  --cyber-red: #b85a5a;
+  --cyber-yellow: #b8963a;
+  --cyber-text: #e8eef4;
+  --cyber-muted: #9aacba;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background-color: var(--cyber-bg);
+  color: var(--cyber-text);
+  min-height: 100vh;
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(26, 35, 50, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(45, 58, 75, 0.7);
+    border-radius: 12px;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #4a9eaf 0%, #8a6ab8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .neon-blue {
+    color: #4a9eaf;
+  }
+
+  .neon-purple {
+    color: #8a6ab8;
+  }
+
+  .btn-cyber {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+    background: linear-gradient(135deg, #3a8ab0 0%, #8a6ab8 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-cyber:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(74, 158, 175, 0.25);
+  }
+
+  .btn-cyber:active {
+    transform: translateY(0);
+  }
+
+  .btn-cyber-outline {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 border;
+    background: transparent;
+    border-color: #2d3a4f;
+    color: #9aacba;
+  }
+
+  .btn-cyber-outline:hover {
+    border-color: #4a9eaf;
+    color: #4a9eaf;
+  }
+
+  .input-cyber {
+    @apply w-full px-3 py-2 rounded-lg outline-none transition-all duration-200;
+    background: #0f1419;
+    border: 1px solid #2d3a4f;
+    color: #e8eef4;
+  }
+
+  .input-cyber:focus {
+    border-color: #4a9eaf;
+    box-shadow: 0 0 0 3px rgba(74, 158, 175, 0.1);
+  }
+
+  .input-cyber::placeholder {
+    color: #6a8090;
+  }
+
+  .table-cyber {
+    @apply w-full text-left;
+  }
+
+  .table-cyber th {
+    @apply px-4 py-3 text-sm font-medium;
+    color: #6a8090;
+    border-bottom: 1px solid #2d3a4f;
+  }
+
+  .table-cyber td {
+    @apply px-4 py-3 text-sm;
+    border-bottom: 1px solid rgba(45, 58, 75, 0.5);
+  }
+
+  .table-cyber tr:hover td {
+    background: rgba(26, 35, 50, 0.5);
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium;
+  }
+
+  .badge-success {
+    background: rgba(74, 158, 106, 0.15);
+    color: #4a9e6a;
+  }
+
+  .badge-warning {
+    background: rgba(184, 150, 58, 0.15);
+    color: #b8963a;
+  }
+
+  .badge-error {
+    background: rgba(184, 90, 90, 0.15);
+    color: #b85a5a;
+  }
+
+  .badge-info {
+    background: rgba(58, 138, 176, 0.15);
+    color: #3a8ab0;
+  }
+
+  .badge-purple {
+    background: rgba(138, 106, 184, 0.15);
+    color: #8a6ab8;
+  }
+}

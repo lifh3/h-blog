@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/22071/Desktop/project/blog/backend/**)",
+      "Bash(ls -la target/*.jar)",
+      "Bash(./mvnw.cmd -v)",
+      "mcp__ide__getDiagnostics",
+      "Bash(netstat -ano)",
+      "Bash(mysql -u root -p -e \"DESCRIBE blog.comment;\")",
+      "Bash(curl -s \"http://localhost:3001/api/articles/1/comments\")",
+      "Bash(mysql:*)",
+      "Bash(curl:*)"
+    ]
+  }
+}

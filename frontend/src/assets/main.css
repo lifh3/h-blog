@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #0f1419;
+    color: #e8eef4;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1a2332;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #3a5a6a;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4a9eaf;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(26, 35, 50, 0.7);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(45, 58, 75, 0.8);
+    border-radius: 12px;
+  }
+
+  .glass-card-hover:hover {
+    border-color: rgba(74, 158, 175, 0.4);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #4a9eaf 0%, #8a6ab8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .btn-cyber {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+    background: rgba(74, 158, 175, 0.15);
+    border: 1px solid rgba(74, 158, 175, 0.5);
+    color: #4a9eaf;
+  }
+
+  .btn-cyber:hover {
+    background: rgba(74, 158, 175, 0.25);
+    border-color: #4a9eaf;
+    box-shadow: 0 0 16px rgba(74, 158, 175, 0.2);
+    transform: translateY(-1px);
+  }
+
+  .input-cyber {
+    @apply w-full px-4 py-3 rounded-lg outline-none transition-all duration-300;
+    background: rgba(15, 20, 25, 0.8);
+    border: 1px solid #2d3a4f;
+    color: #e8eef4;
+  }
+
+  .input-cyber:focus {
+    border-color: #4a9eaf;
+    box-shadow: 0 0 12px rgba(74, 158, 175, 0.15);
+  }
+
+  .tag-cyber {
+    @apply px-3 py-1 rounded-full text-sm font-medium transition-all duration-300;
+    background: rgba(74, 158, 175, 0.1);
+    border: 1px solid rgba(74, 158, 175, 0.3);
+    color: #4a9eaf;
+  }
+
+  .tag-cyber:hover {
+    background: rgba(74, 158, 175, 0.2);
+    border-color: rgba(74, 158, 175, 0.5);
+  }
+
+  .glow-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #4a9eaf, #8a6ab8, transparent);
+  }
+}
+
+/* Highlight.js — 护眼暗色主题 */
+.hljs {
+  background: #1a2332 !important;
+  color: #a8b8c8;
+  padding: 1.5rem !important;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #8a6ab8;
+}
+
+.hljs-string,
+.hljs-attr {
+  color: #4a9e6a;
+}
+
+.hljs-number,
+.hljs-literal {
+  color: #b8963a;
+}
+
+.hljs-comment {
+  color: #5c7080;
+  font-style: italic;
+}
+
+.hljs-function,
+.hljs-title {
+  color: #4a9eaf;
+}
+
+.hljs-variable,
+.hljs-params {
+  color: #e8945a;
+}
+
+.hljs-built_in {
+  color: #c67a48;
+}
